@@ -10,44 +10,38 @@ class MainPage extends StatelessWidget {
       appBar: AppBar(
       title: const Text("Container"),
     ),
-      body: Column(
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                margin: const EdgeInsets.only(left: 10, right: 20),
-                color: Colors.red,
-                padding: const EdgeInsets.all(10),
-                child: Container(
-                  color: Colors.orange,
-                ),
-              ),
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.yellow,
-              ),
-            ], 
+      body: Center(
+        child: Container(
+          width: 100,
+          height: 100,
+          decoration: BoxDecoration(
+            // color: Colors.red,
+            border: Border.all(color: Colors.black, width: 3),
+            // borderRadius: BorderRadius.only(
+            //   topLeft: Radius.circular(20),
+            //   bottomRight: Radius.circular(20),              
+            // ),
+            // gradient: LinearGradient(
+            //   colors: [Colors.red, Colors.yellow],
+            //   begin: Alignment.topRight,
+            //   end: Alignment.bottomRight
+            // )
+            image: DecorationImage(
+              image: NetworkImage('https://avatars.githubusercontent.com/u/50235425?v=4'),
+              fit: BoxFit.cover
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black54,
+                blurRadius: 5,
+                spreadRadius: 5,
+                offset: Offset(5, 5)
+              )
+            ],
+            shape: BoxShape.circle
           ),
-          Row(
-        children: [
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.green,
-          ),
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.blue,
-          ),
-        ], 
-      ),
-        ],
-      ),
+        ),
+      )
     );
   }
   
