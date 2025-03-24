@@ -26,11 +26,11 @@ class MainPage extends StatelessWidget {
             //   begin: Alignment.topRight,
             //   end: Alignment.bottomRight
             // )
-            image: DecorationImage(
+            image: const DecorationImage(
               image: NetworkImage('https://avatars.githubusercontent.com/u/50235425?v=4'),
               fit: BoxFit.cover
             ),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Colors.black54,
                 blurRadius: 5,
