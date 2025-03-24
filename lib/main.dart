@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_word_firt/main_page.dart';
+import 'package:flutterdev/main_page.dart';
 
 void main(){
   runApp(MyApp());

@@ -8,20 +8,44 @@ class MainPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-      title: const Text("Aplikasi Pertamaku"),
+      title: const Text("Container"),
     ),
-      body: const Column(
+      body: Column(
         children: [
-          Text('Hallo'),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Hallo'),
-              Text('Hallo'),
-              Text('Hallo'),
-            ],
+              Container(
+                width: 100,
+                height: 100,
+                margin: const EdgeInsets.only(left: 10, right: 20),
+                color: Colors.red,
+                padding: const EdgeInsets.all(10),
+                child: Container(
+                  color: Colors.orange,
+                ),
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.yellow,
+              ),
+            ], 
           ),
-          Text('Halo'),
-          Text('hallo')
+          Row(
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.green,
+          ),
+          Container(
+            width: 100,
+            height: 100,
+            color: Colors.blue,
+          ),
+        ], 
+      ),
         ],
       ),
     );
